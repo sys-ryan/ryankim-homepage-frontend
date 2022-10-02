@@ -4,7 +4,11 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <h1 className="text-3xl font-bold">Home</h1>
+    </>
+  );
 };
 
 export default Home;
