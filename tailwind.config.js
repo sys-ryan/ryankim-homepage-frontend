@@ -12,11 +12,20 @@ module.exports = {
           blue: "#91c4ce",
           black: "#1a1a17",
         },
+        "input-box-color": "#f4e1be",
+        "placeholder-color": "#c7b596",
       },
       fontFamily: {
         // archivo: ['"Archivo"'],
         alatsi: ['"Alatsi"'],
         nanum_gothic: ['"Nanum Gothic"', "sans-serif"],
+      },
+      gridTemplateRows: {
+        9: "repeat(9, minmax(0, 1fr))",
+        12: "repeat(12, minmax(0, 1fr))",
+      },
+      gridRow: {
+        "span-9": "span 9 / span 9",
       },
     },
   },
