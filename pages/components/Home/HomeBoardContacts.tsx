@@ -5,7 +5,7 @@ import HeartIcon from "../icons/HeartIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import StarIcon from "../icons/StarIcon";
 
-const HomeBoard4 = () => {
+const HomeBoardContacts = () => {
   const [myEmail, setMyEmail] = useState("sys.ryan0902@gmail.com");
 
   const clickCopyHandler = () => {
@@ -51,4 +51,4 @@ const HomeBoard4 = () => {
     </section>
   );
 };
-export default HomeBoard4;
+export default HomeBoardContacts;

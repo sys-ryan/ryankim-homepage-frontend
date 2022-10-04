@@ -38,7 +38,7 @@ const defaultSelectedTechnique: SelectedTechinque = {
 // TODO: backend 에서 technique info fetch
 const techInfo: SelectedTechinque[] = [];
 
-const HomeBoard2 = () => {
+const HomeBoardTechs = () => {
   const [selectedTechnique, setSelectedTechnique] =
     useState<SelectedTechinque>(defaultSelectedTechnique);
 
@@ -265,4 +265,4 @@ const HomeBoard2 = () => {
     </section>
   );
 };
-export default HomeBoard2;
+export default HomeBoardTechs;

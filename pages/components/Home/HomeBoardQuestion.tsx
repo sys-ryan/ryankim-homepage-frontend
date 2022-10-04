@@ -2,7 +2,7 @@ import InputCart from "./cards/InputTextCard";
 import InputTextareaCard from "./cards/InputTextareaCard";
 import { MouseEvent } from "react";
 
-const HomeBoard3 = () => {
+const HomeBoardQuestion = () => {
   const sendHandler = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     alert("message sent");
@@ -40,4 +40,4 @@ const HomeBoard3 = () => {
     </section>
   );
 };
-export default HomeBoard3;
+export default HomeBoardQuestion;
