@@ -12,7 +12,7 @@ const LogoContainer = (props: {
     <div
       className={`${
         props.selectedTechnique.selected === props.name ? "tech-selected" : ""
-      } flex lg:mt-[7%] lg:mx-[30%] lg:w-full lg:min-h-[7rem] lg:items-center lg:text-4xl lg:font-bold lg:p-3 `}
+      } flex lg:my-[4%] lg:mx-[30%] lg:w-full lg:min-h-[7rem] lg:h-[20%] lg:items-center lg:text-4xl lg:font-bold lg:p-3 `}
       onClick={props.clickHandler.bind(null, props.techInfo)}
     >
       {props.children}

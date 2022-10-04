@@ -14,13 +14,12 @@ const HomeBoardMain = () => {
             <p>Application</p>
           </div>
         </div>
-        <div className="description absolute bottom-0 text-sm text-primary-black ml-4 mb-4 font-nanum_gothic font-semibold md:text-lg md:pl-6 md:pb-6 xl:text-xl">
+        <div className="description absolute bottom-0 text-sm text-primary-black ml-4 mb-4 font-nanum_gothic font-bold md:text-lg md:pl-6 md:pb-6">
           <p>단순히 코드만 작성하는 사람이 아닌,</p>
           <p>주어진 문제를 웹 백엔드 서비스의 관점에서</p>
           <p>분석하고 해결하여 더 나은 세상을</p>
           <p>
-            만들어 나가는{" "}
-            <span className="font-black text-lg md:text-2xl lg:text-3xl">“문제 해결사”</span>
+            만들어 나가는 <span className="font-black text-lg md:text-xl">“문제 해결사”</span>
           </p>
         </div>
       </div>
