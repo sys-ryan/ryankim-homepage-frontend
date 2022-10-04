@@ -17,6 +17,13 @@
   @apply bg-primary-black w-6/12 h-1/6 rounded flex items-center pl-4 absolute font-black text-white md:w-7/12 md:h-[12%] md:text-3xl md:pl-8;
 }
 
+.tech-icon {
+  @apply w-[65%] mx-auto text-black;
+}
+
+.tech-selected {
+  @apply bg-primary-blue py-2 rounded-lg h-[70%];
+}
 /* 
 html,
 body {
