@@ -61,10 +61,12 @@ const HomeBoardTechs = () => {
   };
 
   return (
-    <section className="h-screen grid grid-cols-1 grid-rows-4">
-      <div className="bg-white row-span-2 p-3 flex flex-col">
-        <p className="text-sm">Take a look at my techniques and interests.</p>
-        <div className="h-full grid grid-cols-4 grid-rows-3 items-center content-center">
+    <section className="h-screen grid grid-cols-1 grid-rows-2 lg:h-full lg:flex">
+      <div className="bg-white row-span-1 p-3 flex flex-col lg:w-[50%] lg:items-start">
+        <p className="text-sm lg:text-2xl lg:ml-[5%] lg:mt-[5%]">
+          Take a look at my techniques and interests.
+        </p>
+        <div className="h-full grid grid-cols-4 grid-rows-3 items-center content-center lg:flex lg:flex-col lg:w-[90%] lg:m-auto ">
           <LogoContainer
             name="nestjs"
             techInfo={{
@@ -72,12 +74,13 @@ const HomeBoardTechs = () => {
               proficiency: 4,
               experience: ["exp1", "exp2", "exp3"],
               selected: "nestjs",
-              logo: <NestjsLogo className="tech-icon" />,
+              logo: <NestjsLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <NestjsLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">NestJS</p>
           </LogoContainer>
           <LogoContainer
             name="typeorm"
@@ -86,12 +89,13 @@ const HomeBoardTechs = () => {
               proficiency: 4,
               experience: ["exp1", "exp2"],
               selected: "typeorm",
-              logo: <TypeORMIcon className="tech-icon" />,
+              logo: <TypeORMIcon className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <TypeORMIcon className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">TypeORM</p>
           </LogoContainer>
           <LogoContainer
             name="redis"
@@ -100,12 +104,13 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["exp1", "exp2"],
               selected: "redis",
-              logo: <RedisIcon className="tech-icon" />,
+              logo: <RedisIcon className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <RedisIcon className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">Redis</p>
           </LogoContainer>
           <LogoContainer
             name="aws"
@@ -114,12 +119,13 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["exp1", "exp2"],
               selected: "aws",
-              logo: <AWSLogo className="tech-icon" />,
+              logo: <AWSLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <AWSLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">AWS</p>
           </LogoContainer>
           <LogoContainer
             name="mysql"
@@ -128,12 +134,13 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["exp1", "exp2"],
               selected: "mysql",
-              logo: <MysqlLogo className="tech-icon" />,
+              logo: <MysqlLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <MysqlLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">MySQL</p>
           </LogoContainer>
 
           <LogoContainer
@@ -143,12 +150,13 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["exp1", "exp2"],
               selected: "docker",
-              logo: <DockerLogo className="tech-icon" />,
+              logo: <DockerLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <DockerLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">Docker</p>
           </LogoContainer>
 
           <LogoContainer
@@ -158,12 +166,13 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["exp1", "exp2"],
               selected: "github",
-              logo: <GithubLogo className="tech-icon" />,
+              logo: <GithubLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <GithubLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">Github Project Contribution</p>
           </LogoContainer>
 
           <LogoContainer
@@ -173,12 +182,13 @@ const HomeBoardTechs = () => {
               proficiency: 2,
               experience: ["exp1", "exp2"],
               selected: "nextjs",
-              logo: <NextjsLogo className="tech-icon" />,
+              logo: <NextjsLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <NextjsLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">NextJS</p>
           </LogoContainer>
 
           <LogoContainer
@@ -188,12 +198,13 @@ const HomeBoardTechs = () => {
               proficiency: 2,
               experience: ["exp1", "exp2"],
               selected: "react",
-              logo: <ReactLogo className="tech-icon" />,
+              logo: <ReactLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <ReactLogo className="tech-icon" />
+            <p className="hidden lg:block lg:ml-[5%]">React</p>
           </LogoContainer>
 
           {/* And more 특별 처리 (icons) */}
@@ -204,62 +215,45 @@ const HomeBoardTechs = () => {
               proficiency: 2,
               experience: ["exp1", "exp2"],
               selected: "etc",
-              logo: <ThreeDotsLogo className="tech-icon" />,
+              logo: <ThreeDotsLogo className="block-tech-icon" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <ThreeDotsLogo className="tech-icon" />
+            <p className="hidden lg:block  lg:ml-[5%]">And More...</p>
           </LogoContainer>
-
-          {/* <div
-            className={`${selectedTechnique.selected === "aws" ? "tech-selected" : ""}`}
-            onClick={iconSelectHandler.bind(null, "aws")}
-          >
-            <AWSLogo className="tech-icon" />
-          </div> */}
-          {/* <div>
-            <MysqlLogo className="tech-icon" />
-          </div> */}
-
-          {/* <div>
-            <DockerLogo className="tech-icon" />
-          </div> */}
-          {/* <div>
-            <GithubLogo className="tech-icon" />
-          </div> */}
-          {/* <div>
-            <NextjsLogo className="tech-icon" />
-          </div>
-          <div>
-            <ReactLogo className="tech-icon" />
-          </div> */}
-          {/* <div>
-            <ThreeDotsLogo className="tech-icon" />
-          </div> */}
         </div>
       </div>
-      <div className="grid grid-cols-2 grid-rows-1">
-        <div className="bg-primary-blue">
-          <div className="w-full h-full flex flex-col justify-center items-center">
-            <div>{selectedTechnique.logo}</div>
-            <p className="font-black text-xl text-center">{selectedTechnique.title}</p>
+      <div className="row-span-1 lg:row-span-2 lg:w-[50%] ">
+        <div className="flex flex-col h-full lg:w-full lg:h-screen lg:sticky lg:top-0">
+          <div className="flex flex-row">
+            <div className="bg-primary-blue w-[50%] aspect-square">
+              <div className="w-full h-full flex flex-col justify-center items-center">
+                <div>{selectedTechnique.logo}</div>
+                <p className="font-black text-xl text-center lg:text-2xl">
+                  {selectedTechnique.title}
+                </p>
+              </div>
+            </div>
+            <div className="bg-primary-orange w-[50%] aspect-square">
+              <div className="w-full h-full flex flex-col justify-center items-center space-y-7">
+                <p className="font-bold text-lg lg:text-2xl">Proficiency</p>
+                <p className="text-3xl lg:text-4xl">
+                  {getProficiencyStart(selectedTechnique.proficiency)}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="bg-primary-orange">
-          <div className="w-full h-full flex flex-col justify-center items-center space-y-7">
-            <p className="font-bold text-lg">Proficiency</p>
-            <p className="text-3xl">{getProficiencyStart(selectedTechnique.proficiency)}</p>
+          <div className="bg-primary-yellow h-full">
+            <div className="m-5 text-lg">
+              <ul>
+                {selectedTechnique.experience.map((e) => {
+                  return <li key={e}>{e}</li>;
+                })}
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="bg-primary-yellow">
-        <div className="m-5 text-lg">
-          <ul>
-            {selectedTechnique.experience.map((e) => {
-              return <li key={e}>{e}</li>;
-            })}
-          </ul>
         </div>
       </div>
     </section>

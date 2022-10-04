@@ -18,6 +18,10 @@
 }
 
 .tech-icon {
+  @apply w-[65%] mx-auto text-black lg:w-[15%] lg:m-0;
+}
+
+.block-tech-icon {
   @apply w-[65%] mx-auto text-black;
 }
 
