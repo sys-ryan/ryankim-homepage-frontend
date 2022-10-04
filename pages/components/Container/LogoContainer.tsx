@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react";
-import { SelectedTechinque } from "../Home/HomeBoard2";
+import { SelectedTechinque } from "../Home/HomeBoardTechs";
 
 const LogoContainer = (props: {
   children: React.ReactNode;

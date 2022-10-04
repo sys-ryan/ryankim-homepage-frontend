@@ -3,19 +3,19 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import HomeBoard from "./components/Home/HomeBoard";
-import HomeBoard1 from "./components/Home/HomeBoard1";
-import HomeBoard2 from "./components/Home/HomeBoard2";
-import HomeBoard3 from "./components/Home/HomeBoard3";
-import HomeBoard4 from "./components/Home/HomeBoard4";
+import HomeBoardTechs from "./components/Home/HomeBoardTechs";
+import HomeBoardMain from "./components/Home/HomeBoardMain";
+import HomeBoardQuestion from "./components/Home/HomeBoardQuestion";
+import HomeBoardContacts from "./components/Home/HomeBoardContacts";
 
 const Home: NextPage = () => {
   return (
     <>
-      <HomeBoard1 />
-      <HomeBoard2 />
+      <HomeBoardMain />
+      <HomeBoardTechs />
       <HomeBoard />
-      <HomeBoard3 />
-      <HomeBoard4 />
+      <HomeBoardQuestion />
+      <HomeBoardContacts />
       <HomeBoard />
     </>
   );

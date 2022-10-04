@@ -1,6 +1,6 @@
 import MobileKeyboard from "./cards/MobileKeyboard";
 
-const HomeBoard1 = () => {
+const HomeBoardMain = () => {
   return (
     <section className="h-screen grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-1">
       <div className="bg-primary-yellow row-span-3 relative">
@@ -41,4 +41,4 @@ const HomeBoard1 = () => {
     </section>
   );
 };
-export default HomeBoard1;
+export default HomeBoardMain;
