@@ -3,7 +3,7 @@ import AchievementCard from "./cards/AchievementCard";
 const HomeBoardAchievements = () => {
   return (
     <section className="flex flex-col lg:flex-row">
-      <div className="bg-[#ebd0a3] w-full aspect-square p-8 flex flex-col lg:w-1/2">
+      <div className="bg-[#ebd0a3] w-full aspect-square p-4 flex flex-col lg:w-1/2 lg:p-8">
         <div className="relative h-full">
           <div className="h-[95%]">
             <div className="font-black lg:sticky lg:top-8 lg:bottom-10">
@@ -19,7 +19,7 @@ const HomeBoardAchievements = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f5e1be] grid grid-cols-3 grid-rows-3 gap-3 p-5 lg:p-14 lg:w-1/2 lg:gap-14">
+      <div className="bg-[#f5e1be] grid grid-cols-3 grid-rows-3 gap-3 p-4 lg:p-14 lg:w-1/2 lg:gap-14">
         <AchievementCard
           title="International Journal"
           imgPath="/images/achievements/international-journal.png"
