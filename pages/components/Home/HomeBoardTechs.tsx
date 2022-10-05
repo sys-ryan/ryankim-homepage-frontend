@@ -32,7 +32,7 @@ const defaultSelectedTechnique: SelectedTechinque = {
 
   selected: "nestjs",
 
-  logo: <NestjsLogo className="tech-icon" />,
+  logo: <NestjsLogo className="block-tech-icon" />,
 };
 
 // TODO: backend 에서 technique info fetch

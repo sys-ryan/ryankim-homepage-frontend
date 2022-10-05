@@ -10,7 +10,7 @@ const HomeBoardQuestion = () => {
   return (
     <section className="h-screen grid grid-cols-1 grid-rows-12 md:grid-cols-2 md:grid-rows-none">
       <div className="row-span-3 bg-primary-yellow h-screen pt-8 px-8 md:pt-16">
-        <div className="text-5xl font-black md:text-6xl lg:text-8xl md:sticky md:top-0">
+        <div className="text-5xl font-black md:text-6xl lg:text-8xl md:sticky md:top-8">
           <p>
             Any <span className="text-primary-orange">Questions</span>?
           </p>

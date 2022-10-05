@@ -7,13 +7,14 @@ import HomeBoardTechs from "./components/Home/HomeBoardTechs";
 import HomeBoardMain from "./components/Home/HomeBoardMain";
 import HomeBoardQuestion from "./components/Home/HomeBoardQuestion";
 import HomeBoardContacts from "./components/Home/HomeBoardContacts";
+import HomeBoardAchievements from "./components/Home/HomeBoardAchievements";
 
 const Home: NextPage = () => {
   return (
     <>
       <HomeBoardMain />
       <HomeBoardTechs />
-      <HomeBoard />
+      <HomeBoardAchievements />
       <HomeBoardQuestion />
       <HomeBoardContacts />
       <HomeBoard />

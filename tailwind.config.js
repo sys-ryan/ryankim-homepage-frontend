@@ -27,6 +27,10 @@ module.exports = {
       gridRow: {
         "span-9": "span 9 / span 9",
       },
+      cursor: {
+        // copy: "url(/images/copy-cursor.png), pointer",
+        copy: "url(/images/copy-cursor.png) 20 20, pointer",
+      },
     },
   },
   plugins: [],
