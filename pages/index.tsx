@@ -9,6 +9,7 @@ import HomeBoardQuestion from "./components/Home/HomeBoardQuestion";
 import HomeBoardContacts from "./components/Home/HomeBoardContacts";
 import HomeBoardAchievements from "./components/Home/HomeBoardAchievements";
 import HomeBoardMessage from "./components/Home/HomeBoardMessage";
+import HomeBoardFooter from "./components/Home/HomeBoardFooter";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
       <HomeBoardMessage />
       <HomeBoardQuestion />
       <HomeBoardContacts />
-      <HomeBoard />
+      <HomeBoardFooter />
     </>
   );
 };

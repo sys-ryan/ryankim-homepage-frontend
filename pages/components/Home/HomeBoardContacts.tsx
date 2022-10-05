@@ -16,7 +16,7 @@ const HomeBoardContacts = () => {
     }, 1000);
   };
   return (
-    <section className="grid grid-columns-1 grid-rows-2 md:grid-cols-2">
+    <section className="grid grid-columns-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
       <div className="h-[70vh] bg-primary-purple relative p-3 lg:p-8">
         <EmailIcon className="w-20 top-0" />
 
