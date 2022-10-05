@@ -11,6 +11,7 @@ module.exports = {
           beige: "#e6d3b3",
           blue: "#91c4ce",
           black: "#1a1a17",
+          white: "#f3f3f3",
         },
         "input-box-color": "#f4e1be",
         "placeholder-color": "#c7b596",

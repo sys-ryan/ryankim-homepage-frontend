@@ -8,6 +8,7 @@ import HomeBoardMain from "./components/Home/HomeBoardMain";
 import HomeBoardQuestion from "./components/Home/HomeBoardQuestion";
 import HomeBoardContacts from "./components/Home/HomeBoardContacts";
 import HomeBoardAchievements from "./components/Home/HomeBoardAchievements";
+import HomeBoardMessage from "./components/Home/HomeBoardMessage";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <HomeBoardMain />
       <HomeBoardTechs />
       <HomeBoardAchievements />
+      <HomeBoardMessage />
       <HomeBoardQuestion />
       <HomeBoardContacts />
       <HomeBoard />

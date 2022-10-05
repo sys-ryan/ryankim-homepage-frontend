@@ -72,7 +72,7 @@ const HomeBoardTechs = () => {
 
   return (
     <section className="h-screen grid grid-cols-1 grid-rows-2 lg:h-full lg:flex">
-      <div className="bg-white row-span-1 p-3 flex flex-col lg:w-[50%] lg:items-start">
+      <div className="bg-white row-span-1 p-4 flex flex-col lg:w-[50%] lg:items-start">
         <p className="text-sm lg:text-2xl lg:ml-[5%] lg:mt-[5%]">
           Take a look at my techniques and interests.
         </p>
