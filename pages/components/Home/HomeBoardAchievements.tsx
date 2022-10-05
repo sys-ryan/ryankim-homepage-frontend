@@ -26,6 +26,7 @@ const HomeBoardAchievements = () => {
           clickHandler={() => {
             window.open("https://www.mdpi.com/1424-8220/21/6/2060", "_blank");
           }}
+          imgDivClassName="border-8 border-primary-purple"
         />
         <AchievementCard
           title="Master's Thesis"
@@ -36,6 +37,7 @@ const HomeBoardAchievements = () => {
               "_blank"
             );
           }}
+          imgDivClassName="border-8 border-primary-yellow"
         />
         <AchievementCard
           title="TOEIC"
@@ -44,6 +46,7 @@ const HomeBoardAchievements = () => {
           clickHandler={() => {
             window.open("/images/achievements/toeic.png", "_blank");
           }}
+          imgDivClassName="border-8 border-primary-purple"
         />
 
         <AchievementCard
@@ -56,6 +59,7 @@ const HomeBoardAchievements = () => {
               "_blank"
             );
           }}
+          imgDivClassName="border-8 border-primary-orange"
         />
 
         <AchievementCard
@@ -65,12 +69,14 @@ const HomeBoardAchievements = () => {
           clickHandler={() => {
             window.open("/images/achievements/weight-training.jpg", "_blank");
           }}
+          imgDivClassName="border-8 border-primary-yellow"
         />
 
         <AchievementCard
           title="Tutoring"
           imgPath="/images/achievements/tutoring.jpg"
           className="row-start-3 col-start-2"
+          imgDivClassName="border-8 border-primary-blue"
         />
       </div>
     </section>

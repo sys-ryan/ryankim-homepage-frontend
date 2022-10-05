@@ -7,6 +7,7 @@ const AchievementCard = (props: {
   text?: string;
   className?: string;
   clickHandler?: any;
+  imgDivClassName?: string;
 }) => {
   return (
     <div
@@ -19,14 +20,16 @@ const AchievementCard = (props: {
         <LinkIcon className="w-5 absolute top-2 right-2 z-10 p-0.5 lg:w-7" />
       ) : null}
       {props.imgPath ? (
-        <Image
-          src={props.imgPath}
-          alt={props.title}
-          width={1000}
-          height={1500}
-          layout="responsive"
-          className="rounded-xl"
-        />
+        <div className={`rounded-xl ${props.imgDivClassName}`}>
+          <Image
+            src={props.imgPath}
+            alt={props.title}
+            width={1000}
+            height={1500}
+            layout="responsive"
+            className="rounded"
+          />
+        </div>
       ) : (
         <p>{props.text}</p>
       )}
