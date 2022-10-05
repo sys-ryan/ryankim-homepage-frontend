@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import LogoContainer from "../Container/LogoContainer";
 import AWSLogo from "../icons/AWSLogo";
 import DockerLogo from "../icons/DockerLogo";
@@ -10,13 +10,14 @@ import ReactLogo from "../icons/ReactLogo";
 import RedisIcon from "../icons/RedisIcon";
 import ThreeDotsLogo from "../icons/ThreeDotsLogo";
 import TypeORMIcon from "../icons/TypeORMIcon";
+import TechDesciptionListItem from "./items/TechDesciptionListItem";
 
 export interface SelectedTechinque {
   title: string;
 
   proficiency: number;
 
-  experience: string[];
+  experience: string[] | ReactNode[];
 
   selected: string;
 
@@ -191,7 +192,16 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: [
                 "Contribution to 'React-Typescript Cheatsheet' Project which is one of the recommended document suggested by Official Typescript document. (Translation)",
-                "https://github.com/typescript-cheatsheets/react-typescript-cheatsheet-kr",
+                // eslint-disable-next-line react/jsx-key
+                <a
+                  href="https://github.com/typescript-cheatsheets/react-typescript-cheatsheet-kr"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className="hover:cursor-pointer">
+                    <span className="text-[#1100ff] ">(Link) </span>React TypeScript Cheatsheet 🇰🇷
+                  </p>
+                </a>,
               ],
               selected: "github",
               logo: <GithubLogo className="block-tech-icon" />,
@@ -265,10 +275,16 @@ const HomeBoardTechs = () => {
             </div>
           </div>
           <div className="bg-primary-yellow h-full">
-            <div className="m-5 text-lg">
-              <ul>
-                {selectedTechnique.experience.map((e) => {
-                  return <li key={e}>{e}</li>;
+            <div className="m-5 text-md font-semibold ">
+              <ul className="lg:flex lg:flex-col lg:gap-5 lg:p-8">
+                {selectedTechnique.experience.map((e, index) => {
+                  return (
+                    <TechDesciptionListItem key={`${selectedTechnique.title}-${index}`} text={e} />
+                    // <li key={e}>
+                    //   <p>✓</p>
+                    //   <p>{`${e}`}</p>
+                    // </li>
+                  );
                 })}
               </ul>
             </div>
