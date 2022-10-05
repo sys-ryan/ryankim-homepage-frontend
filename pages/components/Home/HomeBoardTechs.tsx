@@ -28,7 +28,16 @@ const defaultSelectedTechnique: SelectedTechinque = {
 
   proficiency: 4,
 
-  experience: ["exp1", "exp2", "exp3"],
+  experience: [
+    "Testing(Unit / e2e)",
+    "OpenAPI(Swagger)",
+    "Authentication/Authorization",
+    "Websockets",
+    "CRUD",
+    "Guards",
+    "Interceptors",
+    "Lifecycle Events",
+  ],
 
   selected: "nestjs",
 
@@ -72,7 +81,16 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "NestJS",
               proficiency: 4,
-              experience: ["exp1", "exp2", "exp3"],
+              experience: [
+                "Testing(Unit / e2e)",
+                "CI/CD(Github Actions)",
+                "OpenAPI(Swagger)",
+                "Authentication/Authorization",
+                "CRUD",
+                "Guards",
+                "Interceptors",
+                "Lifecycle Events",
+              ],
               selected: "nestjs",
               logo: <NestjsLogo className="block-tech-icon" />,
             }}
@@ -87,7 +105,7 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "TypeORM",
               proficiency: 4,
-              experience: ["exp1", "exp2"],
+              experience: ["Database Modeling(Entity, Relations)", "Migrations", "DB Lock"],
               selected: "typeorm",
               logo: <TypeORMIcon className="block-tech-icon" />,
             }}
@@ -102,7 +120,7 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "Redis",
               proficiency: 3,
-              experience: ["exp1", "exp2"],
+              experience: ["Ranking Information Caching", "Static Data Caching"],
               selected: "redis",
               logo: <RedisIcon className="block-tech-icon" />,
             }}
@@ -117,7 +135,7 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "AWS",
               proficiency: 3,
-              experience: ["exp1", "exp2"],
+              experience: ["RDS", "EC2", "Lambda", "API Gateway", "DynamoDB", "Cognito"],
               selected: "aws",
               logo: <AWSLogo className="block-tech-icon" />,
             }}
@@ -132,7 +150,8 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "MySQL",
               proficiency: 3,
-              experience: ["exp1", "exp2"],
+              experience: ["Databse Modeling", "DB Lock"],
+              // TODO: DB 다중화 추가 (하면)
               selected: "mysql",
               logo: <MysqlLogo className="block-tech-icon" />,
             }}
@@ -148,7 +167,13 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "Docker",
               proficiency: 3,
-              experience: ["exp1", "exp2"],
+              experience: [
+                "Deploy Redis Cluster with Docker-Compose",
+                "Images & Containers",
+                "Volumes",
+                "Networking: (Cross-)Container Communication",
+                "Multi-Container Applications",
+              ],
               selected: "docker",
               logo: <DockerLogo className="block-tech-icon" />,
             }}
@@ -164,7 +189,10 @@ const HomeBoardTechs = () => {
             techInfo={{
               title: "Github Project Contribution",
               proficiency: 3,
-              experience: ["exp1", "exp2"],
+              experience: [
+                "Contribution to 'React-Typescript Cheatsheet' Project which is one of the recommended document suggested by Official Typescript document. (Translation)",
+                "https://github.com/typescript-cheatsheets/react-typescript-cheatsheet-kr",
+              ],
               selected: "github",
               logo: <GithubLogo className="block-tech-icon" />,
             }}
@@ -178,9 +206,17 @@ const HomeBoardTechs = () => {
           <LogoContainer
             name="nextjs"
             techInfo={{
-              title: "NextJS",
+              title: "NextJS(React)",
               proficiency: 2,
-              experience: ["exp1", "exp2"],
+              experience: [
+                "SSR",
+                "SPA",
+                "SEO",
+                "API Routes",
+                "React Context",
+                "Redux",
+                "Deployment",
+              ],
               selected: "nextjs",
               logo: <NextjsLogo className="block-tech-icon" />,
             }}
@@ -188,32 +224,15 @@ const HomeBoardTechs = () => {
             clickHandler={iconSelectHandler}
           >
             <NextjsLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">NextJS</p>
+            <p className="hidden lg:block lg:ml-[5%]">NextJS (React)</p>
           </LogoContainer>
 
-          <LogoContainer
-            name="react"
-            techInfo={{
-              title: "React",
-              proficiency: 2,
-              experience: ["exp1", "exp2"],
-              selected: "react",
-              logo: <ReactLogo className="block-tech-icon" />,
-            }}
-            selectedTechnique={selectedTechnique}
-            clickHandler={iconSelectHandler}
-          >
-            <ReactLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">React</p>
-          </LogoContainer>
-
-          {/* And more 특별 처리 (icons) */}
           <LogoContainer
             name="etc"
             techInfo={{
               title: "And more",
               proficiency: 2,
-              experience: ["exp1", "exp2"],
+              experience: ["GraphQL", "Socket.io", "Firebase"],
               selected: "etc",
               logo: <ThreeDotsLogo className="block-tech-icon" />,
             }}
