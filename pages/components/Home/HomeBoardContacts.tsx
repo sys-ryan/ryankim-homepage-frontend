@@ -17,19 +17,22 @@ const HomeBoardContacts = () => {
   };
   return (
     <section className="grid grid-columns-1 grid-rows-2 md:grid-cols-2">
-      <div className="h-[70vh] bg-primary-purple relative p-3">
+      <div className="h-[70vh] bg-primary-purple relative p-3 lg:p-8">
         <EmailIcon className="w-20 top-0" />
 
         <p className="text-5xl font-black absolute top-[45%] md:text-7xl lg:text-8xl">Contact Me</p>
-        <p onClick={clickCopyHandler} className="text-3xl font-bold absolute bottom-3 lg:text-4xl">
+        <p
+          onClick={clickCopyHandler}
+          className="text-3xl font-bold absolute bottom-3 lg:text-4xl lg:bottom-8 hover:cursor-copy"
+        >
           {myEmail}
         </p>
       </div>
-      <div className="h-[70vh] bg-primary-beige relative p-3">
+      <div className="h-[70vh] bg-primary-beige relative p-3 lg:p-8">
         {/* <HeartIcon className="w-20 top-0" /> */}
         <StarIcon className="w-20 top-0" />
         <p className="text-5xl font-black absolute top-[45%] md:text-7xl lg:text-8xl">Follow Me</p>
-        <div className="absolute bottom-3">
+        <div className="absolute bottom-3 lg:bottom-8">
           <div className="flex flex-row gap-3">
             <div
               onClick={() => {
