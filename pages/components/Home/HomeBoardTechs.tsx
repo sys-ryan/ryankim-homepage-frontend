@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode, useEffect, useRef, useState } from "react";
 import LogoContainer from "../Container/LogoContainer";
 import AWSLogo from "../icons/AWSLogo";
 import DockerLogo from "../icons/DockerLogo";
@@ -42,13 +42,28 @@ const defaultSelectedTechnique: SelectedTechinque = {
 
   selected: "nestjs",
 
-  logo: <NestjsLogo className="block-tech-icon" />,
+  logo: <NestjsLogo className="first-nestjs-logo block-tech-icon animate-flip" />,
 };
 
-// TODO: backend 에서 technique info fetch
-const techInfo: SelectedTechinque[] = [];
-
 const HomeBoardTechs = () => {
+  const startingDomRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      // console.log(`entry: ${entry}`);
+      // console.log(`entry.isIntersecting: ${entry.isIntersecting}`);
+      setStartingElementVisible(entry.isIntersecting);
+    });
+
+    observer.observe(startingDomRef.current as Element);
+  }, []);
+
+  const [startingElementVisible, setStartingElementVisible] = useState(false);
+
+  // const [selectedTechnique, setSelectedTechnique] =
+  //   useState<SelectedTechinque>(defaultSelectedTechnique);
+
   const [selectedTechnique, setSelectedTechnique] =
     useState<SelectedTechinque>(defaultSelectedTechnique);
 
@@ -70,10 +85,12 @@ const HomeBoardTechs = () => {
     setSelectedTechnique(techInfo);
   };
 
+  const animationClasses = "animate-flipInX animate-duration-[0.5s]";
+
   return (
-    <section className="h-screen grid grid-cols-1 grid-rows-2 lg:h-full lg:flex">
+    <section id="tech-board" className="h-screen grid grid-cols-1 grid-rows-2 lg:h-full lg:flex">
       <div className="bg-white row-span-1 p-4 flex flex-col lg:w-[50%] lg:items-start">
-        <p className="text-sm lg:text-2xl lg:ml-[5%] lg:mt-[5%]">
+        <p className="text-sm lg:text-2xl lg:mt-[5%]">
           Take a look at my techniques and interests.
         </p>
         <div className="h-full grid grid-cols-4 grid-rows-3 items-center content-center lg:flex lg:flex-col lg:w-[90%] lg:m-auto ">
@@ -93,13 +110,21 @@ const HomeBoardTechs = () => {
                 "Lifecycle Events",
               ],
               selected: "nestjs",
-              logo: <NestjsLogo className="block-tech-icon" />,
+              logo: <NestjsLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <NestjsLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">NestJS</p>
+            <p
+              ref={startingDomRef}
+              id="tech-board-animation-start"
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              }`}
+            >
+              NestJS
+            </p>
           </LogoContainer>
           <LogoContainer
             name="typeorm"
@@ -108,13 +133,19 @@ const HomeBoardTechs = () => {
               proficiency: 4,
               experience: ["Database Modeling(Entity, Relations)", "Migrations", "DB Lock"],
               selected: "typeorm",
-              logo: <TypeORMIcon className="block-tech-icon" />,
+              logo: <TypeORMIcon className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <TypeORMIcon className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">TypeORM</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[0.5s]`}
+            >
+              TypeORM
+            </p>
           </LogoContainer>
           <LogoContainer
             name="redis"
@@ -123,13 +154,19 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["Ranking Information Caching", "Static Data Caching"],
               selected: "redis",
-              logo: <RedisIcon className="block-tech-icon" />,
+              logo: <RedisIcon className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <RedisIcon className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">Redis</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[1.0s]`}
+            >
+              Redis
+            </p>
           </LogoContainer>
           <LogoContainer
             name="aws"
@@ -138,13 +175,19 @@ const HomeBoardTechs = () => {
               proficiency: 3,
               experience: ["RDS", "EC2", "Lambda", "API Gateway", "DynamoDB", "Cognito"],
               selected: "aws",
-              logo: <AWSLogo className="block-tech-icon" />,
+              logo: <AWSLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <AWSLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">AWS</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[1.5s]`}
+            >
+              AWS
+            </p>
           </LogoContainer>
           <LogoContainer
             name="mysql"
@@ -154,13 +197,19 @@ const HomeBoardTechs = () => {
               experience: ["Databse Modeling", "DB Lock"],
               // TODO: DB 다중화 추가 (하면)
               selected: "mysql",
-              logo: <MysqlLogo className="block-tech-icon" />,
+              logo: <MysqlLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <MysqlLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">MySQL</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[1.7s]`}
+            >
+              MySQL
+            </p>
           </LogoContainer>
 
           <LogoContainer
@@ -176,13 +225,19 @@ const HomeBoardTechs = () => {
                 "Multi-Container Applications",
               ],
               selected: "docker",
-              logo: <DockerLogo className="block-tech-icon" />,
+              logo: <DockerLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <DockerLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">Docker</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[1.9s]`}
+            >
+              Docker
+            </p>
           </LogoContainer>
 
           <LogoContainer
@@ -204,13 +259,19 @@ const HomeBoardTechs = () => {
                 </a>,
               ],
               selected: "github",
-              logo: <GithubLogo className="block-tech-icon" />,
+              logo: <GithubLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <GithubLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">Github Project Contribution</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[2.1s]`}
+            >
+              Github Project Contribution
+            </p>
           </LogoContainer>
 
           <LogoContainer
@@ -228,13 +289,19 @@ const HomeBoardTechs = () => {
                 "Deployment",
               ],
               selected: "nextjs",
-              logo: <NextjsLogo className="block-tech-icon" />,
+              logo: <NextjsLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <NextjsLogo className="tech-icon" />
-            <p className="hidden lg:block lg:ml-[5%]">NextJS (React)</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[2.2s]`}
+            >
+              NextJS (React)
+            </p>
           </LogoContainer>
 
           <LogoContainer
@@ -244,13 +311,19 @@ const HomeBoardTechs = () => {
               proficiency: 2,
               experience: ["GraphQL", "Socket.io", "Firebase"],
               selected: "etc",
-              logo: <ThreeDotsLogo className="block-tech-icon" />,
+              logo: <ThreeDotsLogo className="block-tech-icon animate-flip" />,
             }}
             selectedTechnique={selectedTechnique}
             clickHandler={iconSelectHandler}
           >
             <ThreeDotsLogo className="tech-icon" />
-            <p className="hidden lg:block  lg:ml-[5%]">And More...</p>
+            <p
+              className={`tech-title lg:col-span-3 ${
+                startingElementVisible ? animationClasses : ""
+              } animate-delay-[2.4s]`}
+            >
+              And More...
+            </p>
           </LogoContainer>
         </div>
       </div>

@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withAnimations = require("animated-tailwindcss");
+
+module.exports = withAnimations({
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -20,6 +22,7 @@ module.exports = {
         // archivo: ['"Archivo"'],
         alatsi: ['"Alatsi"'],
         nanum_gothic: ['"Nanum Gothic"', "sans-serif"],
+        noto_sans_kr: ['"Noto Sans KR"'],
       },
       gridTemplateRows: {
         9: "repeat(9, minmax(0, 1fr))",
@@ -35,4 +38,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});
