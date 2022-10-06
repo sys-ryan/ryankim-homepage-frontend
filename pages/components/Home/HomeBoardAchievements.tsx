@@ -9,13 +9,13 @@ const HomeBoardAchievements = () => {
             <div className="font-black lg:sticky lg:top-8 lg:bottom-10">
               <p className="text-5xl lg:text-8xl">Ryan Kim,</p>
               <p className="text-4xl lg:text-7xl">
-                an <span className="font-black text-[#A621DB]">Ambitious</span> man
+                an <span className="font-black text-[#A621DB] text-5xl">Ambitious</span> man with
               </p>
-              <p className="text-4xl lg:text-7xl">with 智德體</p>
+              <p className="text-4xl lg:text-7xl">knowledge, morals, and body</p>
             </div>
           </div>
           <div className="absolute bottom-3">
-            <p className="text-lg bottom-3 lg:text-2xl">knowledge, morals, and body</p>
+            <p className="text-lg bottom-3 lg:text-2xl">A sound mind in a sound body</p>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@ const HomeBoardAchievements = () => {
           clickHandler={() => {
             window.open("https://www.mdpi.com/1424-8220/21/6/2060", "_blank");
           }}
-          imgDivClassName="border-8 border-primary-purple"
+          imgDivClassName="bg-primary-yellow"
         />
         <AchievementCard
           title="Master's Thesis"
@@ -37,21 +37,21 @@ const HomeBoardAchievements = () => {
               "_blank"
             );
           }}
-          imgDivClassName="border-8 border-primary-yellow"
+          imgDivClassName="bg-primary-blue"
         />
         <AchievementCard
           title="TOEIC"
           imgPath="/images/achievements/toeic.png"
           className="row-start-2 col-start-2"
           clickHandler={() => {
-            window.open("/images/achievements/toeic.png", "_blank");
+            window.open("/images/achievements/original/toeic.png", "_blank");
           }}
-          imgDivClassName="border-8 border-primary-purple"
+          imgDivClassName="bg-primary-purple"
         />
 
         <AchievementCard
           title="Translation"
-          imgPath="/images/achievements/translation.jpg"
+          imgPath="/images/achievements/translation.png"
           className="row-start-2 col-start-3"
           clickHandler={() => {
             window.open(
@@ -59,24 +59,24 @@ const HomeBoardAchievements = () => {
               "_blank"
             );
           }}
-          imgDivClassName="border-8 border-primary-orange"
+          imgDivClassName="bg-primary-orange"
         />
 
         <AchievementCard
           title="Weight Training"
-          imgPath="/images/achievements/weight-training.jpg"
+          imgPath="/images/achievements/weight-training.png"
           className="row-start-3 col-start-1"
           clickHandler={() => {
-            window.open("/images/achievements/weight-training.jpg", "_blank");
+            window.open("/images/achievements/original/weight-training.jpg", "_blank");
           }}
-          imgDivClassName="border-8 border-primary-yellow"
+          imgDivClassName="bg-primary-purple"
         />
 
         <AchievementCard
           title="Tutoring"
-          imgPath="/images/achievements/tutoring.jpg"
+          imgPath="/images/achievements/tutoring.png"
           className="row-start-3 col-start-2"
-          imgDivClassName="border-8 border-primary-blue"
+          imgDivClassName="bg-primary-yellow"
         />
       </div>
     </section>
