@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ArrowDown from "../icons/ArrowDown";
 import MobileKeyboard from "./cards/MobileKeyboard";
 
 const HomeBoardMain = () => {
@@ -89,6 +90,10 @@ const HomeBoardMain = () => {
           text="M.S, Information Security"
         />
         {/* desktop */}
+      </div>
+      <div className="absolute bottom-[1%] w-[3%] left-0 right-0 mx-auto animate-flash animate-duration-[3s] animate-infinite">
+        <p className="text-xl w-[4%] text-white">Scroll</p>
+        <ArrowDown className="bottom-[5%] left-0 right-0 mx-auto text-2xl text-white " />
       </div>
     </section>
   );
