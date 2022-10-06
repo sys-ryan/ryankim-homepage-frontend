@@ -1,6 +1,22 @@
+import { useEffect, useRef, useState } from "react";
 import AchievementCard from "./cards/AchievementCard";
 
 const HomeBoardAchievements = () => {
+  const startingDomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setStartingElementVisible(entry.isIntersecting);
+    });
+
+    observer.observe(startingDomRef.current as Element);
+  }, []);
+
+  const [startingElementVisible, setStartingElementVisible] = useState(false);
+
+  const animationClasses = `animate-bounceInUp animate-duration-[1s]`;
+
   return (
     <section className="flex flex-col lg:flex-row">
       <div className="bg-[#ebd0a3] w-full aspect-square p-4 flex flex-col lg:w-1/2 lg:p-8">
@@ -9,7 +25,8 @@ const HomeBoardAchievements = () => {
             <div className="font-black lg:sticky lg:top-8 lg:bottom-10">
               <p className="text-5xl lg:text-8xl">Ryan Kim,</p>
               <p className="text-4xl lg:text-7xl">
-                an <span className="font-black text-[#A621DB] text-5xl">Ambitious</span> man with
+                an <span className="font-black text-[#A621DB] text-5xl lg:text-8xl">Ambitious</span>{" "}
+                man with
               </p>
               <p className="text-4xl lg:text-7xl">knowledge, morals, and body</p>
             </div>
@@ -19,7 +36,10 @@ const HomeBoardAchievements = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f5e1be] grid grid-cols-3 grid-rows-3 gap-3 p-4 lg:p-14 lg:w-1/2 lg:gap-14">
+      <div
+        className="bg-[#f5e1be] grid grid-cols-3 grid-rows-3 gap-3 p-4 lg:p-14 lg:w-1/2 lg:gap-14"
+        ref={startingDomRef}
+      >
         <AchievementCard
           title="International Journal"
           imgPath="/images/achievements/international-journal.png"
@@ -27,6 +47,7 @@ const HomeBoardAchievements = () => {
             window.open("https://www.mdpi.com/1424-8220/21/6/2060", "_blank");
           }}
           imgDivClassName="bg-primary-yellow"
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.4s]`}
         />
         <AchievementCard
           title="Master's Thesis"
@@ -38,6 +59,7 @@ const HomeBoardAchievements = () => {
             );
           }}
           imgDivClassName="bg-primary-blue"
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.2s]`}
         />
         <AchievementCard
           title="TOEIC"
@@ -47,6 +69,7 @@ const HomeBoardAchievements = () => {
             window.open("/images/achievements/original/toeic.png", "_blank");
           }}
           imgDivClassName="bg-primary-purple"
+          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
         />
 
         <AchievementCard
@@ -60,6 +83,7 @@ const HomeBoardAchievements = () => {
             );
           }}
           imgDivClassName="bg-primary-orange"
+          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
         />
 
         <AchievementCard
@@ -70,6 +94,7 @@ const HomeBoardAchievements = () => {
             window.open("/images/achievements/original/weight-training.jpg", "_blank");
           }}
           imgDivClassName="bg-primary-purple"
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.6s]`}
         />
 
         <AchievementCard
@@ -77,6 +102,7 @@ const HomeBoardAchievements = () => {
           imgPath="/images/achievements/tutoring.png"
           className="row-start-3 col-start-2"
           imgDivClassName="bg-primary-yellow"
+          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
         />
       </div>
     </section>
