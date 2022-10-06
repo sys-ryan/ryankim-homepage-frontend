@@ -20,14 +20,14 @@ const AchievementCard = (props: {
         <LinkIcon className="w-5 absolute top-2 right-2 z-10 p-0.5 lg:w-7" />
       ) : null}
       {props.imgPath ? (
-        <div className={`rounded-xl ${props.imgDivClassName}`}>
+        <div className={`rounded-2xl ${props.imgDivClassName}`}>
           <Image
             src={props.imgPath}
             alt={props.title}
             width={1000}
             height={1500}
             layout="responsive"
-            className="rounded"
+            className="rounded-2xl object-cover"
           />
         </div>
       ) : (

@@ -7,12 +7,16 @@ import HomeBoardMessage from "./components/Home/HomeBoardMessage";
 import HomeBoardQuestion from "./components/Home/HomeBoardQuestion";
 import HomeBoardTechs from "./components/Home/HomeBoardTechs";
 import BurgerMenu from "./components/icons/BurgerMenu";
+import Menu from "./ui/Menu";
 
 const HomeBoard = () => {
+  const menuClickHandler = () => {};
+
   return (
     <>
+      {/* <Menu /> */}
       <div className="sticky top-[4%] z-50">
-        <BurgerMenu className="" />
+        <BurgerMenu />
       </div>
       <HomeBoardMain />
       <HomeBoardTechs />
