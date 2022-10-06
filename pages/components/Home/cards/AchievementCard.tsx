@@ -8,6 +8,7 @@ const AchievementCard = (props: {
   className?: string;
   clickHandler?: any;
   imgDivClassName?: string;
+  imgClassName?: string;
 }) => {
   return (
     <div
@@ -27,7 +28,7 @@ const AchievementCard = (props: {
             width={1000}
             height={1500}
             layout="responsive"
-            className="rounded-2xl object-cover"
+            className={`rounded-2xl object-cover ${props.imgClassName}`}
           />
         </div>
       ) : (
