@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomeBoardMessage = () => {
   return (
-    <section className="h-screen grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+    <section className="h-screen bg-primary-black grid grid-cols-1 grid-rows-2 gap-y-0 lg:grid-cols-2 lg:grid-rows-1">
       <div className="bg-primary-black h-full p-4 row-span-1 lg:col-start-2 lg:bg-primary-white lg:relative">
         <div className="lg:h-[90%]">
           <div className="text-5xl font-extrabold text-primary-white lg:p-8 lg:text-primary-black lg:text-7xl lg:sticky lg:top-8">
@@ -22,7 +22,7 @@ const HomeBoardMessage = () => {
           <p>to collaborations with veraiety of people.</p>
         </div>
       </div>
-      <div className="bg-primary-black row-span-1 p-4 lg:col-start-1 lg:row-start-1">
+      <div className="bg-primary-black h-full row-span-1 p-4 lg:col-start-1 lg:row-start-1">
         <div className="relative w-full h-full">
           <div className="w-48 absolute bottom-4 right-4 lg:w-[50%] lg:m-8">
             <Image

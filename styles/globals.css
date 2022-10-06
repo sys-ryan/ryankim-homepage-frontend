@@ -1,33 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.key {
+  transition: transform 0.5s ease-out;
+}
+
+.key:hover {
+  transform: translatex(3rem);
+}
 
 .home-board {
   @apply h-screen bg-slate-500;
 }
 
 .white-key {
-  @apply my-0.5 w-11/12 h-1/6 rounded flex items-center pl-4 font-normal text-gray-900 md:h-[15%] md:my-1.5 md:text-3xl md:pl-8;
+  @apply my-0.5 w-11/12 h-1/6 rounded flex items-center pl-4 font-normal text-gray-900 md:h-[15%] md:my-1.5 md:text-3xl md:pl-8 font-noto_sans_kr;
 }
 
 .black-key {
-  @apply bg-primary-black w-6/12 h-1/6 rounded flex items-center pl-4 absolute font-normal text-white md:w-7/12 md:h-[12%] md:text-3xl md:pl-8;
+  @apply bg-primary-black w-6/12 h-1/6 rounded flex items-center pl-4 absolute font-normal text-white md:w-7/12 md:h-[12%] md:text-3xl md:pl-8 z-10 font-noto_sans_kr;
 }
 
 .tech-icon {
-  @apply w-[65%] mx-auto text-black lg:w-[15%] lg:m-0;
+  @apply w-[65%] mx-auto text-black lg:w-[15%] lg:m-0 lg:w-[70%];
+}
+
+.tech-title {
+  @apply hidden lg:block lg:col-span-3;
 }
 
 .block-tech-icon {
-  @apply w-[65%] mx-auto text-black;
+  @apply w-[65%] mx-auto text-black lg:col-span-3;
 }
 
 .tech-selected {
   @apply bg-primary-blue py-2 rounded-lg h-[70%];
 }
+
 /* 
 html,
 body {
