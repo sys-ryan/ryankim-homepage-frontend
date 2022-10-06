@@ -36,10 +36,7 @@ const HomeBoardAchievements = () => {
           </div>
         </div>
       </div>
-      <div
-        className="bg-[#f5e1be] grid grid-cols-3 grid-rows-3 gap-3 p-4 lg:p-14 lg:w-1/2 lg:gap-14"
-        ref={startingDomRef}
-      >
+      <div className="bg-[#f5e1be] grid grid-cols-3 grid-rows-3 gap-3 p-4 lg:p-14 lg:w-1/2 lg:gap-14">
         <AchievementCard
           title="International Journal"
           imgPath="/images/achievements/international-journal.png"
@@ -47,7 +44,9 @@ const HomeBoardAchievements = () => {
             window.open("https://www.mdpi.com/1424-8220/21/6/2060", "_blank");
           }}
           imgDivClassName="bg-primary-yellow"
-          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.4s]`}
+          imgClassName={`${
+            startingElementVisible ? animationClasses : "hidden"
+          } animate-delay-[0.4s]`}
         />
         <AchievementCard
           title="Master's Thesis"
@@ -59,8 +58,11 @@ const HomeBoardAchievements = () => {
             );
           }}
           imgDivClassName="bg-primary-blue"
-          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.2s]`}
+          imgClassName={`${
+            startingElementVisible ? animationClasses : "hidden"
+          } animate-delay-[0.2s]`}
         />
+
         <AchievementCard
           title="TOEIC"
           imgPath="/images/achievements/toeic.png"
@@ -69,7 +71,9 @@ const HomeBoardAchievements = () => {
             window.open("/images/achievements/original/toeic.png", "_blank");
           }}
           imgDivClassName="bg-primary-purple"
-          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
+          imgClassName={`${
+            startingElementVisible ? animationClasses : "hidden"
+          } animate-delay-[0.7s]`}
         />
 
         <AchievementCard
@@ -83,8 +87,9 @@ const HomeBoardAchievements = () => {
             );
           }}
           imgDivClassName="bg-primary-orange"
-          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
+          imgClassName={`${startingElementVisible ? animationClasses : "hidden"}`}
         />
+        <span ref={startingDomRef} className="row-start-2"></span>
 
         <AchievementCard
           title="Weight Training"
@@ -94,7 +99,9 @@ const HomeBoardAchievements = () => {
             window.open("/images/achievements/original/weight-training.jpg", "_blank");
           }}
           imgDivClassName="bg-primary-purple"
-          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.6s]`}
+          imgClassName={`${
+            startingElementVisible ? animationClasses : "hidden"
+          } animate-delay-[0.6s]`}
         />
 
         <AchievementCard
@@ -102,7 +109,7 @@ const HomeBoardAchievements = () => {
           imgPath="/images/achievements/tutoring.png"
           className="row-start-3 col-start-2"
           imgDivClassName="bg-primary-yellow"
-          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
+          imgClassName={`${startingElementVisible ? animationClasses : "hidden"}`}
         />
       </div>
     </section>

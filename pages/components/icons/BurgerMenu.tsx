@@ -14,7 +14,7 @@ const BurgerMenu = () => {
       ref={buttonRef}
       className={`${classes.btn} ${classes["burger-menu"]} ${
         isActive ? classes.active : classes["not-active"]
-      } z-10`}
+      } z-10 bg-primary-orange p-2 rounded`}
       onClick={clickHandler}
     >
       <span className={classes.span}></span>
