@@ -15,7 +15,7 @@ const HomeBoard = () => {
   return (
     <>
       {/* <Menu /> */}
-      <div className="sticky top-[4%] z-50">
+      <div className="sticky top-[4%] z-50 ">
         <BurgerMenu />
       </div>
       <HomeBoardMain />
