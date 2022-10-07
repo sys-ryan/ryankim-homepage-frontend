@@ -90,7 +90,7 @@ const HomeBoardTechs = () => {
   return (
     <section id="tech-board" className="h-screen grid grid-cols-1 grid-rows-2 lg:h-full lg:flex">
       <div className="bg-white row-span-1 p-4 flex flex-col lg:w-[50%] lg:items-start">
-        <p className="text-sm lg:text-2xl lg:mt-[5%]">
+        <p className="text-sm lg:text-2xl lg:mt-[3%] lg:ml-[5%]">
           Take a look at my techniques and interests.
         </p>
         <div className="h-full grid grid-cols-4 grid-rows-3 items-center content-center lg:flex lg:flex-col lg:w-[90%] lg:m-auto ">

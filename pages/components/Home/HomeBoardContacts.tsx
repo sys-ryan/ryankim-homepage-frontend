@@ -34,19 +34,31 @@ const HomeBoardContacts = () => {
         <p className="text-5xl font-black absolute top-[45%] md:text-7xl">Follow Me</p>
         <div className="absolute bottom-3 lg:bottom-8">
           <div className="flex flex-row gap-3">
-            <div
-              onClick={() => {
-                window.open("https://github.com/sys-ryan");
-              }}
-            >
-              <GithubIcon className="w-14 border-4 rounded border-black p-1 md:w-16" />
+            <div className="border-4 rounded border-black w-[4.5rem] lg:hover:w-[12rem] transition-all contact-icon hover:border-primary-orange">
+              <div
+                onClick={() => {
+                  window.open("https://github.com/sys-ryan");
+                }}
+                className="w-[4rem] h-[4rem] lg:hover:w-[12rem] overflow-hidden"
+              >
+                <div className="flex flex-row w-[12rem] items-center">
+                  <GithubIcon className="w-[4rem] h-[4rem] p-1" />
+                  <p className="text-3xl ml-[0.8rem] font-bold">Github</p>
+                </div>
+              </div>
             </div>
-            <div
-              onClick={() => {
-                window.open("https://www.instagram.com/me_gusta__ryan/");
-              }}
-            >
-              <InstagramIcon className="w-14 border-4 rounded border-black p-1 md:w-16" />
+            <div className="border-4 rounded border-black w-[4.5rem] lg:hover:w-[15rem] transition-all contact-icon hover:border-primary-orange">
+              <div
+                onClick={() => {
+                  window.open("https://www.instagram.com/me_gusta__ryan/");
+                }}
+                className="w-[4rem] h-[4rem] lg:hover:w-[15rem] overflow-hidden"
+              >
+                <div className="flex flex-row w-[15rem] items-center">
+                  <InstagramIcon className="w-[4rem] h-[4rem] p-1" />
+                  <p className="text-3xl ml-[0.8rem] font-bold">Instagram</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
