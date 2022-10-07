@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import HomeBoardAchievements from "./components/Home/HomeBoardAchievements";
-import HomeBoardContacts from "./components/Home/HomeBoardContacts";
-import HomeBoardFooter from "./components/Home/HomeBoardFooter";
-import HomeBoardMain from "./components/Home/HomeBoardMain";
-import HomeBoardMessage from "./components/Home/HomeBoardMessage";
-import HomeBoardQuestion from "./components/Home/HomeBoardQuestion";
-import HomeBoardTechs from "./components/Home/HomeBoardTechs";
-import BurgerMenu from "./components/icons/BurgerMenu";
-import Menu from "./ui/Menu";
+import HomeBoardAchievements from "./HomeBoardAchievements";
+import HomeBoardContacts from "./HomeBoardContacts";
+import HomeBoardFooter from "./HomeBoardFooter";
+import HomeBoardMain from "./HomeBoardMain";
+import HomeBoardMessage from "./HomeBoardMessage";
+import HomeBoardQuestion from "./HomeBoardQuestion";
+import HomeBoardTechs from "./HomeBoardTechs";
+import BurgerMenu from "../icons/BurgerMenu";
+import Menu from "../../ui/Menu";
 
 const HomeBoard = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
