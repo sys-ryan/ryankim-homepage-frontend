@@ -16,7 +16,7 @@ const LogoContainer = (props: {
           ? "hover:bg-primary-blue/30 hover:rounded-lg"
           : ""
       }
-      flex items-center lg:my-[4%] lg:mx-[30%] lg:w-full lg:min-h-[7rem] lg:h-[20%] lg:items-center lg:text-4xl lg:font-bold lg:p-10`}
+      flex items-center lg:my-[4%] lg:mx-[30%] lg:w-full lg:min-h-[7rem] lg:h-[20%] lg:items-center lg:text-4xl lg:font-bold lg:p-10 hover:animate-headShake`}
       onClick={props.clickHandler.bind(null, props.techInfo)}
     >
       <div className="lg:h-full lg:grid lg:grid-cols-4 lg:gap-5 lg:items-center hover:cursor-pointer">
