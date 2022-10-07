@@ -23,8 +23,8 @@ const HomeBoardMessage = () => {
         </div>
       </div>
       <div className="bg-primary-black h-full row-span-1 p-4 lg:col-start-1 lg:row-start-1">
-        <div className="relative w-full h-full">
-          <div className="w-48 absolute bottom-4 right-4 lg:w-[50%] lg:m-8">
+        <div className="flex justify-center items-end w-full h-full">
+          <div className="w-48 lg:w-[50%] lg:m-8">
             <Image
               src={"/images/ready-image.png"}
               alt={"box"}

@@ -1,15 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Menu = (props: { className: string; isVisible: boolean; clickHandler: any }) => {
-  const openClasses = "fixed  lg:grid";
+  useEffect(() => {
+    if (!props.isVisible) {
+      setTimeout(() => {
+        setZIdx("-z-10");
+      }, 1000);
+    } else {
+      setZIdx("z-30");
+    }
+  }, [props.isVisible]);
 
-  // const [classes, setClasses] = useState();
+  const [zIdx, setZIdx] = useState("");
 
-  const classes = props.isVisible ? "fixed lg:grid animate-fadeIn animate-duration-800" : "hidden";
+  const classes = props.isVisible ? "lg:grid opacity-100" : "opacity-0";
 
   return (
-    <div className={`h-screen w-screen bg-black top-0 left-0 z-30 lg:grid-cols-3 ${classes}`}>
+    <div
+      className={`fixed h-screen w-screen bg-black top-0 left-0 lg:grid-cols-3 transition-opacity duration-[1s] ease-in-out ${classes} ${zIdx}`}
+    >
       <div className="h-full w-full bg-black lg:col-span-1 lg:z-10">
         <div className=" text-white h-[60%] flex flex-col justify-between w-[70%] mt-[40%] mx-auto text-4xl font-semibold lg:mt-[30%] lg:h-[60%] ">
           <div className="flex" onClick={props.clickHandler}>
