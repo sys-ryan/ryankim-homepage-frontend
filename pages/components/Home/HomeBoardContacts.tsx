@@ -34,7 +34,7 @@ const HomeBoardContacts = () => {
         <p className="text-5xl font-black absolute top-[45%] md:text-7xl">Follow Me</p>
         <div className="absolute bottom-3 lg:bottom-8">
           <div className="flex flex-row gap-3">
-            <div className="border-4 rounded border-black w-[4.5rem] lg:hover:w-[12rem] transition-all contact-icon hover:border-primary-orange">
+            <div className="border-4 rounded border-black w-[4.5rem] lg:hover:w-[12rem] transition-all contact-icon lg:hover:border-primary-orange">
               <div
                 onClick={() => {
                   window.open("https://github.com/sys-ryan");
@@ -47,7 +47,7 @@ const HomeBoardContacts = () => {
                 </div>
               </div>
             </div>
-            <div className="border-4 rounded border-black w-[4.5rem] lg:hover:w-[15rem] transition-all contact-icon hover:border-primary-orange">
+            <div className="border-4 rounded border-black w-[4.5rem] lg:hover:w-[15rem] transition-all contact-icon lg:hover:border-primary-orange">
               <div
                 onClick={() => {
                   window.open("https://www.instagram.com/me_gusta__ryan/");
