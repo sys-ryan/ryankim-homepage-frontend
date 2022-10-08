@@ -24,28 +24,27 @@ export interface SelectedTechinque {
   logo: JSX.Element;
 }
 
-const defaultSelectedTechnique: SelectedTechinque = {
-  title: "NestJS",
-
-  proficiency: 4,
-
-  experience: [
-    "Testing(Unit / e2e)",
-    "OpenAPI(Swagger)",
-    "Authentication/Authorization",
-    "Websockets",
-    "CRUD",
-    "Guards",
-    "Interceptors",
-    "Lifecycle Events",
-  ],
-
-  selected: "nestjs",
-
-  logo: <NestjsLogo className="first-nestjs-logo block-tech-icon animate-flip" />,
-};
-
 const HomeBoardTechs = () => {
+  const defaultSelectedTechnique: SelectedTechinque = {
+    title: "NestJS",
+
+    proficiency: 4,
+
+    experience: [
+      "Testing(Unit / e2e)",
+      "OpenAPI(Swagger)",
+      "Authentication/Authorization",
+      "Websockets",
+      "CRUD",
+      "Guards",
+      "Interceptors",
+      "Lifecycle Events",
+    ],
+
+    selected: "nestjs",
+
+    logo: <NestjsLogo className="first-nestjs-logo block-tech-icon animate-flip" />,
+  };
   const startingDomRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
