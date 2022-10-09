@@ -19,7 +19,7 @@ const HomeBoardMessage = () => {
         <div className="text-primary-white mt-10 text-lg lg:text-primary-black lg:absolute lg:bottom-12 lg:left-12 lg:text-xl">
           <p>With my experience ranging from</p>
           <p>diverse Web development projects </p>
-          <p>to collaborations with veraiety of people.</p>
+          <p>to collaborations with variety of people.</p>
         </div>
       </div>
       <div className="bg-primary-black h-full row-span-1 p-4 lg:col-start-1 lg:row-start-1">
