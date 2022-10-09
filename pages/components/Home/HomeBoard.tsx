@@ -18,7 +18,7 @@ const HomeBoard = () => {
 
   return (
     <div>
-      <Menu
+      {/* <Menu
         className={`${
           isMenuVisible ? "fixed lg:grid animate-fadeIn animate-duration-800" : "hidden"
         }`}
@@ -26,12 +26,12 @@ const HomeBoard = () => {
         clickHandler={menuClickHandler}
       />
 
-      {/* <div className="sticky top-[4%] h-[3rem] z-50 "> */}
+      
       <div className="fixed top-0 right-0 w-full h-[4rem] z-50">
         <div className="sticky top-[4%] w-full right-0 z-50">
           <BurgerMenu clickHandler={menuClickHandler} isMenuVisible={isMenuVisible} />
         </div>
-      </div>
+      </div> */}
 
       <HomeBoardMain />
       <HomeBoardTechs />

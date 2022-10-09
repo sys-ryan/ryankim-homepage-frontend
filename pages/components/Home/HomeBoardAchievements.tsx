@@ -44,9 +44,7 @@ const HomeBoardAchievements = () => {
             window.open("https://www.mdpi.com/1424-8220/21/6/2060", "_blank");
           }}
           imgDivClassName="bg-primary-yellow"
-          imgClassName={`${
-            startingElementVisible ? animationClasses : "hidden"
-          } animate-delay-[0.4s]`}
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.4s]`}
         />
         <AchievementCard
           title="Master's Thesis"
@@ -58,9 +56,7 @@ const HomeBoardAchievements = () => {
             );
           }}
           imgDivClassName="bg-primary-blue"
-          imgClassName={`${
-            startingElementVisible ? animationClasses : "hidden"
-          } animate-delay-[0.2s]`}
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.2s]`}
         />
 
         <AchievementCard
@@ -71,9 +67,7 @@ const HomeBoardAchievements = () => {
             window.open("/images/achievements/original/toeic.png", "_blank");
           }}
           imgDivClassName="bg-primary-purple"
-          imgClassName={`${
-            startingElementVisible ? animationClasses : "hidden"
-          } animate-delay-[0.7s]`}
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.7s]`}
         />
 
         <AchievementCard
@@ -87,7 +81,7 @@ const HomeBoardAchievements = () => {
             );
           }}
           imgDivClassName="bg-primary-orange"
-          imgClassName={`${startingElementVisible ? animationClasses : "hidden"}`}
+          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
         />
         <span ref={startingDomRef} className="row-start-2"></span>
 
@@ -99,9 +93,7 @@ const HomeBoardAchievements = () => {
             window.open("/images/achievements/original/weight-training.jpg", "_blank");
           }}
           imgDivClassName="bg-primary-purple"
-          imgClassName={`${
-            startingElementVisible ? animationClasses : "hidden"
-          } animate-delay-[0.6s]`}
+          imgClassName={`${startingElementVisible ? animationClasses : ""} animate-delay-[0.6s]`}
         />
 
         <AchievementCard
@@ -109,7 +101,7 @@ const HomeBoardAchievements = () => {
           imgPath="/images/achievements/tutoring.png"
           className="row-start-3 col-start-2"
           imgDivClassName="bg-primary-yellow"
-          imgClassName={`${startingElementVisible ? animationClasses : "hidden"}`}
+          imgClassName={`${startingElementVisible ? animationClasses : ""}`}
         />
       </div>
     </section>
