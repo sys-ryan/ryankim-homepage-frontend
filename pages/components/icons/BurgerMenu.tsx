@@ -15,7 +15,7 @@ const BurgerMenu = (props: { clickHandler: any; isMenuVisible: boolean }) => {
       ref={buttonRef}
       className={`${classes.btn} ${classes["burger-menu"]} ${
         props.isMenuVisible ? classes.active : classes["not-active"]
-      } z-10 bg-primary-orange p-2 rounded m-0 lg:mr-[0.5%]`}
+      } z-10 p-2 rounded m-0 lg:mr-[0.5%]`}
       onClick={clickHandler}
     >
       <span className={classes.span}></span>

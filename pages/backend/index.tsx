@@ -1,10 +1,10 @@
 import { NextPage } from "next";
-import CategoryList from "../components/Blog/CategoryList";
+import BlogHome from "../components/Blog/BlogHome";
 
 const BackendPage: NextPage = () => {
   return (
     <div>
-      <CategoryList /> 
+      <BlogHome />
     </div>
   );
 };
