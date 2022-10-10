@@ -25,8 +25,8 @@ const AchievementCard = (props: {
           <Image
             src={props.imgPath}
             alt={props.title}
-            width={1000}
-            height={1500}
+            width={500}
+            height={750}
             layout="responsive"
             className={`rounded-2xl object-cover ${props.imgClassName}`}
           />
