@@ -24,7 +24,7 @@ const HomeBoardMain = () => {
   }, []);
 
   return (
-    <section className="h-screen grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-1">
+    <section className="h-screen grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-1 overflow-hidden">
       <div className="bg-primary-yellow row-span-3 relative animate-fadeInUp">
         <div className="heading-text h-full relative">
           <div className="text-5xl text-primary-black font-black font-aratsi absolute top-1/4 ml-4 md:top-[35%] md:text-7xl md:pl-6 xl:top-[28%] xl:text-8xl">
@@ -91,9 +91,11 @@ const HomeBoardMain = () => {
         />
         {/* desktop */}
       </div>
-      <div className="absolute bottom-[1%] w-[3%] left-0 right-0 mx-auto animate-flash animate-duration-[3s] animate-infinite">
-        <p className="text-xl w-[4%] text-white">Scroll</p>
-        <ArrowDown className="bottom-[5%] left-0 right-0 mx-auto text-2xl text-white " />
+      <div className="absolute bottom-0 lg:bottom-[1%] w-[3%] left-0 right-0 mx-auto animate-flash animate-duration-[3s] animate-infinite">
+        <div className="flex flex-col items-center">
+          <p className="text-xl text-white">Scroll</p>
+          <ArrowDown className="bottom-[5%] left-0 right-0 mx-auto text-2xl text-white " />
+        </div>
       </div>
     </section>
   );
