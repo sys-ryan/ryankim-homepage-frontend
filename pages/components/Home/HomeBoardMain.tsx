@@ -91,9 +91,11 @@ const HomeBoardMain = () => {
         />
         {/* desktop */}
       </div>
-      <div className="absolute bottom-[1%] w-[3%] left-0 right-0 mx-auto animate-flash animate-duration-[3s] animate-infinite">
-        <p className="text-xl w-[4%] text-white">Scroll</p>
-        <ArrowDown className="bottom-[5%] left-0 right-0 mx-auto text-2xl text-white " />
+      <div className="absolute bottom-0 lg:bottom-[1%] w-[3%] left-0 right-0 mx-auto animate-flash animate-duration-[3s] animate-infinite">
+        <div className="flex flex-col items-center">
+          <p className="text-xl text-white">Scroll</p>
+          <ArrowDown className="bottom-[5%] left-0 right-0 mx-auto text-2xl text-white " />
+        </div>
       </div>
     </section>
   );
