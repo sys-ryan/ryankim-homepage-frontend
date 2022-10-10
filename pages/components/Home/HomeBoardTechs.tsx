@@ -350,8 +350,9 @@ const HomeBoardTechs = () => {
             <div className="m-5 text-md font-semibold ">
               <ul className="lg:flex lg:flex-col lg:gap-5 lg:p-8">
                 {selectedTechnique.experience.map((e, index) => {
+                  const keyString = `${selectedTechnique.title}-${index}`;
                   return (
-                    <TechDesciptionListItem key={`${selectedTechnique.title}-${index}`} text={e} />
+                    <TechDesciptionListItem key={keyString} keyString={keyString} text={e} />
                     // <li key={e}>
                     //   <p>✓</p>
                     //   <p>{`${e}`}</p>
