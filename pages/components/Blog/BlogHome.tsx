@@ -1,6 +1,6 @@
 import BlogHeader from "./BlogHeader";
 import BlogMenu from "./BlogMenu";
-import PostList from "./PostList";
+import PostList from "./posts/PostList";
 
 const BlogHome = () => {
   return (
