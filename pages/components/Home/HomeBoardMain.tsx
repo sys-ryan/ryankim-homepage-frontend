@@ -24,7 +24,7 @@ const HomeBoardMain = () => {
   }, []);
 
   return (
-    <section className="h-screen grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-1">
+    <section className="h-screen grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-1 overflow-hidden">
       <div className="bg-primary-yellow row-span-3 relative animate-fadeInUp">
         <div className="heading-text h-full relative">
           <div className="text-5xl text-primary-black font-black font-aratsi absolute top-1/4 ml-4 md:top-[35%] md:text-7xl md:pl-6 xl:top-[28%] xl:text-8xl">
