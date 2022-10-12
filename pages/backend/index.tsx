@@ -2,7 +2,6 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { useRouter } from "next/router";
 import { Post } from "../../interfaces/post.interface";
 import BlogHeader from "../components/Blog/BlogHeader";
-import BlogHome from "../components/Blog/BlogHome";
 import BlogMenu from "../components/Blog/BlogMenu";
 import PostList from "../components/Blog/posts/PostList";
 

@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import LogoContainer from "../Container/LogoContainer";
 import AWSLogo from "../icons/AWSLogo";
 import DockerLogo from "../icons/DockerLogo";
@@ -6,7 +6,6 @@ import GithubLogo from "../icons/GithubLogo";
 import MysqlLogo from "../icons/MysqlLogo";
 import NestjsLogo from "../icons/NestjsLogo";
 import NextjsLogo from "../icons/NextjsLogo";
-import ReactLogo from "../icons/ReactLogo";
 import RedisIcon from "../icons/RedisIcon";
 import ThreeDotsLogo from "../icons/ThreeDotsLogo";
 import TypeORMIcon from "../icons/TypeORMIcon";
@@ -50,8 +49,6 @@ const HomeBoardTechs = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      // console.log(`entry: ${entry}`);
-      // console.log(`entry.isIntersecting: ${entry.isIntersecting}`);
       setStartingElementVisible(entry.isIntersecting);
     });
 
@@ -59,10 +56,6 @@ const HomeBoardTechs = () => {
   }, []);
 
   const [startingElementVisible, setStartingElementVisible] = useState(false);
-
-  // const [selectedTechnique, setSelectedTechnique] =
-  //   useState<SelectedTechinque>(defaultSelectedTechnique);
-
   const [selectedTechnique, setSelectedTechnique] =
     useState<SelectedTechinque>(defaultSelectedTechnique);
 
@@ -351,13 +344,7 @@ const HomeBoardTechs = () => {
               <ul className="lg:flex lg:flex-col lg:gap-5 lg:p-8">
                 {selectedTechnique.experience.map((e, index) => {
                   const keyString = `${selectedTechnique.title}-${index}`;
-                  return (
-                    <TechDesciptionListItem key={keyString} keyString={keyString} text={e} />
-                    // <li key={e}>
-                    //   <p>✓</p>
-                    //   <p>{`${e}`}</p>
-                    // </li>
-                  );
+                  return <TechDesciptionListItem key={keyString} keyString={keyString} text={e} />;
                 })}
               </ul>
             </div>

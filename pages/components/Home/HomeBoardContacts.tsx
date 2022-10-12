@@ -1,7 +1,6 @@
 import { useState } from "react";
 import EmailIcon from "../icons/EmailIcon";
 import GithubIcon from "../icons/GithubIcon";
-import HeartIcon from "../icons/HeartIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import StarIcon from "../icons/StarIcon";
 
@@ -29,7 +28,6 @@ const HomeBoardContacts = () => {
         </p>
       </div>
       <div className="h-[70vh] bg-primary-beige relative p-3 lg:p-8">
-        {/* <HeartIcon className="w-20 top-0" /> */}
         <StarIcon className="w-20 top-0" />
         <p className="text-5xl font-black absolute top-[45%] md:text-7xl">Follow Me</p>
         <div className="absolute bottom-3 lg:bottom-8">

@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ArrowDown from "../icons/ArrowDown";
 import MobileKeyboard from "./cards/MobileKeyboard";
 
 const HomeBoardMain = () => {
-  const [transformAnimation, setTransformAnimation] = useState("");
   useEffect(() => {
     setTimeout(() => {
       const keys = document.querySelectorAll(".key");
