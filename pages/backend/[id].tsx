@@ -34,10 +34,6 @@ const BackendPost: NextPage = (props: InferGetStaticPropsType<typeof getStaticPr
 };
 export default BackendPost;
 
-type PageParams = {
-  id: string;
-};
-
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch(`${process.env.backendBaseUrl}/posts/${context.params?.id}`);
   const post: Post = await res.json();
