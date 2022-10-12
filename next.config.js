@@ -12,6 +12,7 @@ const nextConfig = {
   },
   env: {
     backendBaseUrl: "http://localhost:3002/api/v1",
+    appBaseUrl: "http://localhost:3000",
   },
 };
 

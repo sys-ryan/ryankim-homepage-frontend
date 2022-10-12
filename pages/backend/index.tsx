@@ -10,7 +10,6 @@ const BackendPage: NextPage = (props: InferGetStaticPropsType<typeof getStaticPr
   const router = useRouter();
 
   const asPath = router.asPath;
-  const postBasePath = `${process.env.backendBaseUrl}/${asPath}`;
 
   return (
     <div>
@@ -19,7 +18,7 @@ const BackendPage: NextPage = (props: InferGetStaticPropsType<typeof getStaticPr
         <BlogHeader />
         <BlogMenu />
 
-        <PostList posts={props.posts} postBasePath={postBasePath} />
+        <PostList posts={props.posts} />
       </div>
     </div>
   );
