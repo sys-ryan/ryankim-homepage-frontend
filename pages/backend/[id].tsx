@@ -1,10 +1,4 @@
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
-  InferGetStaticPropsType,
-  NextPage,
-} from "next";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { useRouter } from "next/router";
 import { Post } from "../../interfaces/post.interface";
 import { parseMarkdown } from "../../lib/posts-util";

@@ -9,7 +9,6 @@ const HomeBoardMessage = () => {
             <p>
               I am <span className="text-6xl text-[#6F38C5] lg:text-8xl">ready</span> to
             </p>
-            {/* text-[#9403fc] */}
             <p>embark on </p>
             <p>the journey of</p>
             <p className="text-6xl text-[#87A2FB] lg:text-8xl">solving</p>
