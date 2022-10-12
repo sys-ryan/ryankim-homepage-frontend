@@ -28,21 +28,14 @@ import PostItem from "./PostItem";
 
 interface PostListProps {
   posts: Post[];
+  postBasePath: string;
 }
 
 const PostList = (props: PostListProps) => {
-  console.log("props", props);
-
   return (
     <div className="lg:flex lg:flex-col">
       {props.posts.map((post) => (
-        // TODO: gray-matter 적용
-        <PostItem
-          key={post.id}
-          title={post.title}
-          excerpt={post.excerpt}
-          thumbnail={post.thumbnail}
-        />
+        <PostItem post={post} postBasePath={props.postBasePath} />
       ))}
     </div>
   );
