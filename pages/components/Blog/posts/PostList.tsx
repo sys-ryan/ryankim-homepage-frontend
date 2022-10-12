@@ -1,6 +1,4 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { Post } from "../../../../interfaces/post.interface";
-import BlogHeader from "../BlogHeader";
 import PostItem from "./PostItem";
 
 // const DUMMY_POSTS = [
@@ -42,22 +40,3 @@ const PostList = (props: PostListProps) => {
 export default PostList;
 
 // TODO pagination
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const res = await fetch(`${process.env.backendBaseUrl}/posts`);
-//   const posts: Post[] = await res.json();
-
-//   console.log("posts", posts);
-
-//   if (!res.ok) {
-//     throw new Error(`Failed to fetch posts, received status ${res.status}`);
-//   }
-
-//   return {
-//     props: {
-//       posts,
-//       test: "123",
-//     },
-//     revalidate: 3600,
-//   };
-// };

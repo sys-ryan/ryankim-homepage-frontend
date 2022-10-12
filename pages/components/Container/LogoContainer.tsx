@@ -1,4 +1,3 @@
-import { MouseEventHandler, ReactNode } from "react";
 import { SelectedTechinque } from "../Home/HomeBoardTechs";
 
 const LogoContainer = (props: {
@@ -24,7 +23,5 @@ const LogoContainer = (props: {
       </div>
     </div>
   );
-  //
-  // bg-primary-blue/25 py-2 rounded-lg h-[70%]
 };
 export default LogoContainer;
