@@ -1,6 +1,11 @@
 import Head from "next/head";
 
-const HeadMeta = (props: { title?: string; description?: string; url?: string; image: string }) => {
+const HeadMeta = (props: {
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string;
+}) => {
   return (
     <Head>
       <title>{props.title || "Ryan Kim"}</title>
@@ -15,7 +20,7 @@ const HeadMeta = (props: { title?: string; description?: string; url?: string; i
       <meta property="og:title" content={props.title || "Ryan Kim's Web Site / Tech Blog"} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={props.url || "https://www.ryankim.co.kr/"} />
-      <meta property="og:image" content={props.image} />
+      <meta property="og:image" content={props.image || "/images/logo.png"} />
       <meta property="og:article:author" content={"Ryna Kim"} />
     </Head>
   );
