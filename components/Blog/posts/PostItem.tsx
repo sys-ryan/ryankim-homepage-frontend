@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Post } from "../../../../interfaces/post.interface";
+import { Post } from "../../../interfaces/post.interface";
 
 const PostItem = (props: { post: Post }) => {
   const { post } = props;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import MenuItem from "../components/items/MenuItem";
+import MenuItem from "../../components/items/MenuItem";
 
 const Menu = (props: { className: string; isVisible: boolean; clickHandler: any }) => {
   useEffect(() => {

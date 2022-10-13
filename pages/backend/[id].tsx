@@ -2,10 +2,10 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } fro
 import { useRouter } from "next/router";
 import { Post } from "../../interfaces/post.interface";
 import { parseMarkdown } from "../../lib/posts-util";
-import BlogHeader from "../components/Blog/BlogHeader";
-import BlogMenu from "../components/Blog/BlogMenu";
-import PostContent from "../components/Blog/posts/post-detail/PostContent";
-import HeadMeta from "../components/HeadMeta";
+import BlogHeader from "../../components/Blog/BlogHeader";
+import BlogMenu from "../../components/Blog/BlogMenu";
+import PostContent from "../../components/Blog/posts/post-detail/PostContent";
+import HeadMeta from "../../components/HeadMeta";
 
 const BackendPost: NextPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();

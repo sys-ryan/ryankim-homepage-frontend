@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import HeadMeta from "./components/HeadMeta";
-import HomeBoard from "./components/Home/HomeBoard";
+import HeadMeta from "../components/HeadMeta";
+import HomeBoard from "../components/Home/HomeBoard";
 
 const Home: NextPage = () => {
   return (

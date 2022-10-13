@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useState } from "react";
 import Menu from "./ui/Menu";
-import BurgerMenu from "./components/icons/BurgerMenu";
+import BurgerMenu from "../components/icons/BurgerMenu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
