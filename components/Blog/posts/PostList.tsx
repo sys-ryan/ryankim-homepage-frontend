@@ -1,4 +1,4 @@
-import { Post } from "../../../../interfaces/post.interface";
+import { Post } from "../../../interfaces/post.interface";
 import PostItem from "./PostItem";
 
 // const DUMMY_POSTS = [

@@ -1,4 +1,4 @@
-import { Post } from "../../../interfaces/post.interface";
+import { Post } from "../../interfaces/post.interface";
 import BlogHeader from "./BlogHeader";
 import BlogMenu from "./BlogMenu";
 import PostList from "./posts/PostList";
