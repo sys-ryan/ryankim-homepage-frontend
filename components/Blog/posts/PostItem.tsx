@@ -39,10 +39,10 @@ const PostItem = (props: { post: Post }) => {
             layout="responsive"
             priority
           />
-          <div className="px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal flex overflow-hidden md:hidden">
+          <div className="px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal flex items-center overflow-hidden md:hidden">
             {postExcerpt}
           </div>
-          <div className="mt-5 px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal md:flex overflow-hidden hidden justify-center items-center">
+          <div className="mt-5 px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal md:flex overflow-hidden hidden items-center">
             {postExcerptMd}
           </div>
         </a>
