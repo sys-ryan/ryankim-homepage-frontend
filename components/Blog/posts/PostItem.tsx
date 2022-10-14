@@ -13,7 +13,7 @@ const PostItem = (props: { post: Post }) => {
   });
 
   const postExcerpt =
-    post.excerpt.length <= 20 ? post.excerpt : post.excerpt.substring(0, 20) + " ...";
+    post.excerpt.length <= 85 ? post.excerpt : post.excerpt.substring(0, 85) + " ...";
   const postExcerptMd =
     post.excerpt.length <= 164 ? post.excerpt : post.excerpt.substring(0, 164) + " ...";
 
