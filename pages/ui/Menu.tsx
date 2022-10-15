@@ -13,7 +13,7 @@ const Menu = (props: { className: string; isVisible: boolean; clickHandler: any 
     }
   }, [props.isVisible]);
 
-  const [zIdx, setZIdx] = useState("");
+  const [zIdx, setZIdx] = useState("-z-10");
 
   const classes = props.isVisible ? "lg:grid opacity-100" : "opacity-0";
 
