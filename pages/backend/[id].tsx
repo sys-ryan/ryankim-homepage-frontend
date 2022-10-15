@@ -18,7 +18,7 @@ const BackendPost: NextPage = (props: InferGetStaticPropsType<typeof getStaticPr
       <HeadMeta
         title={`${subCategory} - ${props.post.title}`}
         description={props.post.excerpt}
-        url={`${process.env.backendBaseUrl}/${router.asPath}`}
+        url={`${process.env.appBaseUrl}/${router.asPath}`}
       />
       <BlogHeader />
       <BlogMenu />

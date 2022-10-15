@@ -14,7 +14,7 @@ const BackendPage: NextPage = (props: InferGetStaticPropsType<typeof getStaticPr
       <HeadMeta
         title={`Backend`}
         description={`Posts on backecnd frameworks and techknowledge.`}
-        url={`${process.env.backendBaseUrl}/${router.asPath}`}
+        url={`${process.env.appBaseUrl}${router.asPath}`}
       />
       <BlogHeader />
       <BlogMenu />
