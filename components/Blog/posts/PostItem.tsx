@@ -38,6 +38,7 @@ const PostItem = (props: { post: Post }) => {
             height={900}
             layout="responsive"
             priority
+            unoptimized={true}
           />
           <div className="px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal flex items-center overflow-hidden md:hidden">
             {postExcerpt}
