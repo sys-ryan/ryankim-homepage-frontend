@@ -32,7 +32,7 @@ const Menu = (props: { className: string; isVisible: boolean; clickHandler: any 
         </div>
       </div>
       <div className="hidden lg:flex lg:col-start-2 lg:col-span-2 lg:bg-purple-50 overflow-hidden">
-        <Image src="/images/menu-bg.jpg" alt="menu" layout="fill" />
+        <Image src="/images/menu-bg.jpg" alt="menu" layout="fill" priority unoptimized={true} />
       </div>
     </div>
   );
