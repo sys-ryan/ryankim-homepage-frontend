@@ -4,12 +4,18 @@ import { Post } from "../../interfaces/post.interface";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogMenu from "../../components/Blog/BlogMenu";
 import PostList from "../../components/Blog/posts/PostList";
+import HeadMeta from "../../components/HeadMeta";
 
 const BackendPage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
 
   return (
     <div>
+      <HeadMeta
+        title={`Backend`}
+        description={`Posts on backecnd frameworks and techknowledge.`}
+        url={`${process.env.backendBaseUrl}/${router.asPath}`}
+      />
       <BlogHeader />
       <BlogMenu />
 
