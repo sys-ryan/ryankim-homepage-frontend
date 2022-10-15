@@ -18,6 +18,7 @@ const PostHeader = (props: { title: string; image: string; date: Date }) => {
             width={1600}
             height={900}
             className="object-cover"
+            unoptimized={true}
           />
         </div>
       </div>
