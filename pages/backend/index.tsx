@@ -8,17 +8,12 @@ import PostList from "../../components/Blog/posts/PostList";
 const BackendPage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
 
-  const asPath = router.asPath;
-
   return (
     <div>
-      {/* <BlogHome posts={props.posts} /> */}
-      <div>
-        <BlogHeader />
-        <BlogMenu />
+      <BlogHeader />
+      <BlogMenu />
 
-        <PostList posts={props.posts} />
-      </div>
+      <PostList posts={props.posts} />
     </div>
   );
 };
