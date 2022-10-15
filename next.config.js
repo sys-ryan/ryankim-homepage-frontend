@@ -4,8 +4,6 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/dist/shared/lib/constants");
 const nextConfig = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
-      reactStrictMode: true,
-      swcMinify: true,
       images: {
         domains: [
           "img.freepik.com",
@@ -14,6 +12,8 @@ const nextConfig = (phase, { defaultConfig }) => {
           "ryan-blog.s3.amazonaws.com",
         ],
       },
+      reactStrictMode: true,
+      swcMinify: true,
       env: {
         backendBaseUrl: "http://localhost:3002/api/v1",
         appBaseUrl: "http://localhost:3000",
@@ -22,11 +22,11 @@ const nextConfig = (phase, { defaultConfig }) => {
   }
 
   return {
-    reactStrictMode: true,
-    swcMinify: true,
     images: {
       domains: ["ryan-blog.s3.amazonaws.com"],
     },
+    reactStrictMode: true,
+    swcMinify: true,
     env: {
       backendBaseUrl: "http://75.101.228.40/api/v1",
       appBaseUrl: "https://www.ryankim.co.kr",
