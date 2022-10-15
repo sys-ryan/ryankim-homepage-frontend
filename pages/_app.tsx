@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useState } from "react";
-import Menu from "./ui/Menu";
+import Menu from "../components/ui/Menu";
 import BurgerMenu from "../components/icons/BurgerMenu";
 
 function MyApp({ Component, pageProps }: AppProps) {

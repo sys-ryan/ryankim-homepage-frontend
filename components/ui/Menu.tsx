@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import MenuItem from "../../components/items/MenuItem";
+import MenuItem from "../items/MenuItem";
 
 const Menu = (props: { className: string; isVisible: boolean; clickHandler: any }) => {
   useEffect(() => {
@@ -15,7 +15,7 @@ const Menu = (props: { className: string; isVisible: boolean; clickHandler: any 
 
   const [zIdx, setZIdx] = useState("");
 
-  const classes = props.isVisible ? "lg:grid opacity-100" : "opacity-0 hidden";
+  const classes = props.isVisible ? "lg:grid opacity-100" : "opacity-0";
 
   return (
     <div
