@@ -18,7 +18,7 @@ const BackendPost: NextPage = (props: InferGetStaticPropsType<typeof getStaticPr
       <HeadMeta
         title={`${subCategory} - ${props.post.title}`}
         description={props.post.excerpt}
-        url={`${process.env.backendBaseUrl}/${router.asPath}`}
+        url={`${process.env.appBaseUrl}/${router.asPath}`}
       />
       <BlogHeader />
       <BlogMenu />
@@ -48,8 +48,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await fetch(`${process.env.backendBaseUrl}/posts`);
+  const posts: Post[] = await res.json();
+  posts.map((post) => ({ params: { id: post.id.toString() } }));
+
   return {
-    paths: [{ params: { id: "1" } }],
+    paths: posts.map((post) => ({ params: { id: post.id.toString() } })),
+
     fallback: "blocking",
   };
 };

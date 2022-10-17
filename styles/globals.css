@@ -5,7 +5,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  box-sizing: border-box;
+}
 .key {
   transition: transform 0.5s ease-out;
 }
