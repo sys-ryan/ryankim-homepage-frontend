@@ -54,6 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: posts.map((post) => ({ params: { id: post.id.toString() } })),
+
     fallback: "blocking",
   };
 };

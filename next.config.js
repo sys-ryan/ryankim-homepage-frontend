@@ -12,8 +12,10 @@ const nextConfig = (phase, { defaultConfig }) => {
           "ryan-blog.s3.amazonaws.com",
         ],
       },
+
       reactStrictMode: true,
       swcMinify: true,
+
       env: {
         backendBaseUrl: "http://localhost:3002/api/v1",
         appBaseUrl: "http://localhost:3000",
