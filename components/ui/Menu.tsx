@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import MenuItem from "../../components/items/MenuItem";
+import MenuItem from "../items/MenuItem";
 
 const Menu = (props: { className: string; isVisible: boolean; clickHandler: any }) => {
   useEffect(() => {
@@ -15,11 +15,11 @@ const Menu = (props: { className: string; isVisible: boolean; clickHandler: any 
 
   const [zIdx, setZIdx] = useState("");
 
-  const classes = props.isVisible ? "lg:grid opacity-100" : "opacity-0";
+  const classes = props.isVisible ? "opacity-100" : "opacity-0";
 
   return (
     <div
-      className={`fixed h-screen w-screen bg-black top-0 left-0 lg:grid-cols-3 transition-opacity duration-[1s] ease-in-out ${classes} ${zIdx}`}
+      className={`fixed h-screen w-screen bg-black top-0 left-0 lg:grid lg:grid-cols-3 transition-opacity duration-[1s] ease-in-out ${classes} ${zIdx}`}
     >
       <div className="h-full w-full bg-black lg:col-span-1 lg:z-10">
         <div className=" text-white h-[60%] flex flex-col justify-between w-[70%] mt-[40%] mx-auto text-4xl font-semibold lg:mt-[30%] lg:h-[60%] ">
@@ -31,8 +31,8 @@ const Menu = (props: { className: string; isVisible: boolean; clickHandler: any 
           <MenuItem clickHandler={props.clickHandler} to="/contact" title="Contact" />
         </div>
       </div>
-      <div className="hidden lg:flex lg:col-start-2 lg:col-span-2 lg:bg-purple-50 overflow-hidden">
-        <Image src="/images/menu-bg.jpg" alt="menu" layout="fill" />
+      <div className="hidden bg-black lg:relative lg:flex lg:col-start-2 lg:col-span-2 lg:bg-purple-50 overflow-hidden">
+        <Image src="/images/menu-bg.jpg" alt="menu" layout="fill" priority={true} />
       </div>
     </div>
   );

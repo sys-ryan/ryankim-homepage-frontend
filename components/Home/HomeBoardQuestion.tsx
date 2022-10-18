@@ -1,11 +1,61 @@
 import InputCart from "./cards/InputTextCard";
 import InputTextareaCard from "./cards/InputTextareaCard";
-import { MouseEvent } from "react";
+import { MouseEvent, useRef } from "react";
 
 const HomeBoardQuestion = () => {
-  const sendHandler = (e: MouseEvent<HTMLButtonElement>) => {
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const messageInputRef = useRef<HTMLTextAreaElement>(null);
+
+  const sendHandler = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    alert("message sent");
+
+    // input validation
+    const name = nameInputRef.current?.value;
+    const email = emailInputRef.current?.value;
+    const message = messageInputRef.current?.value;
+
+    if (name === "" || name!.length < 3) {
+      alert("Wrong input: name too short");
+      return;
+    }
+
+    if (email === "" || email!.length < 5 || !email?.includes("@")) {
+      alert("Wrong input: email");
+      return;
+    }
+
+    if (message === "" || message!.length < 5) {
+      alert("Wrong input: message too short");
+      return;
+    }
+
+    // send request to backend
+    const response = await fetch("/api/questions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
+
+    if (!response.ok) {
+      alert("Failed to save question.");
+      return;
+    }
+
+    if (response.status === 201) {
+      alert("Question sent");
+    }
+
+    // clear input fields
+    nameInputRef.current!.value = "";
+    emailInputRef.current!.value = "";
+    messageInputRef.current!.value = "";
   };
   return (
     <section className="h-screen grid grid-cols-1 grid-rows-12 lg:grid-cols-2 lg:grid-rows-none">
@@ -21,13 +71,17 @@ const HomeBoardQuestion = () => {
       </div>
       <div className="row-span-9 grid grid-rows-9 px-8 bg-primary-yellow lg:bg-white lg:pt-16 lg:grid-rows-5">
         <div className="row-span-2 lg:row-span-1">
-          <InputCart title="Name" placeholder="Your name" />
+          <InputCart title="Name" placeholder="Your name" inputRef={nameInputRef} />
         </div>
         <div className="row-span-2 lg:row-span-1">
-          <InputCart title="Email Address" placeholder="Your email" />
+          <InputCart title="Email Address" placeholder="Your email" inputRef={emailInputRef} />
         </div>
         <div className="row-span-3 lg:row-span-2">
-          <InputTextareaCard title="Message" placeholder="Example Text" />
+          <InputTextareaCard
+            title="Message"
+            placeholder="Example Text"
+            inputRef={messageInputRef}
+          />
         </div>
         <div className="row-span-2 grid grid-cols-3 pb-6 lg:row-start-6 lg:row-span-1 lg:grid-cols-3 lg:grid-rows-2">
           <button

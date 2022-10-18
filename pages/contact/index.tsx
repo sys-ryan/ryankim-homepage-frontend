@@ -1,6 +1,7 @@
 import { NextPage } from "next";
+import HomeBoardContacts from "../../components/Home/HomeBoardContacts";
 
 const ContactPage: NextPage = () => {
-  return <div>ContactPage</div>;
+  return <HomeBoardContacts />;
 };
 export default ContactPage;

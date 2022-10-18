@@ -13,7 +13,7 @@ const PostItem = (props: { post: Post }) => {
   });
 
   const postExcerpt =
-    post.excerpt.length <= 20 ? post.excerpt : post.excerpt.substring(0, 20) + " ...";
+    post.excerpt.length <= 85 ? post.excerpt : post.excerpt.substring(0, 85) + " ...";
   const postExcerptMd =
     post.excerpt.length <= 164 ? post.excerpt : post.excerpt.substring(0, 164) + " ...";
 
@@ -25,7 +25,7 @@ const PostItem = (props: { post: Post }) => {
   return (
     <li
       key={post.id}
-      className="shadow-xl mb-8 flex flex-col mt-[2rem] w-full h-[26rem] md:w-[50rem] md:h-[41rem] md:mx-auto hover:cursor-pointer"
+      className="shadow-xl mb-8 flex flex-col mt-[2rem] w-full md:w-[50rem] md:mx-auto hover:cursor-pointer"
     >
       <Link href={postPath}>
         <a className="">
@@ -38,11 +38,12 @@ const PostItem = (props: { post: Post }) => {
             height={900}
             layout="responsive"
             priority
+            unoptimized={true}
           />
-          <div className="mt-5 px-4 text-md md:h-[3.5rem] md:text-xl md:mb-5 md:px-8 break-normal flex overflow-hidden md:hidden">
+          <div className="px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal flex items-center overflow-hidden md:hidden">
             {postExcerpt}
           </div>
-          <div className="mt-5 px-4 text-md md:h-[3.5rem] md:text-xl md:mb-5 md:px-8 break-normal md:flex overflow-hidden hidden">
+          <div className="mt-5 px-4 py-4 text-md md:text-xl md:mb-5 md:px-8 break-normal md:flex overflow-hidden hidden items-center">
             {postExcerptMd}
           </div>
         </a>

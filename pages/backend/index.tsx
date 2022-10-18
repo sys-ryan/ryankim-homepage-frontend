@@ -4,21 +4,22 @@ import { Post } from "../../interfaces/post.interface";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogMenu from "../../components/Blog/BlogMenu";
 import PostList from "../../components/Blog/posts/PostList";
+import HeadMeta from "../../components/HeadMeta";
 
 const BackendPage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
 
-  const asPath = router.asPath;
-
   return (
     <div>
-      {/* <BlogHome posts={props.posts} /> */}
-      <div>
-        <BlogHeader />
-        <BlogMenu />
+      <HeadMeta
+        title={`Backend`}
+        description={`Posts on backecnd frameworks and techknowledge.`}
+        url={`${process.env.appBaseUrl}${router.asPath}`}
+      />
+      <BlogHeader />
+      <BlogMenu />
 
-        <PostList posts={props.posts} />
-      </div>
+      <PostList posts={props.posts} />
     </div>
   );
 };
@@ -36,6 +37,5 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts,
     },
-    revalidate: 3600,
   };
 };

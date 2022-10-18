@@ -1,10 +1,13 @@
+import Link from "next/link";
 import RyanLogo from "../items/RyanLogo";
 
 const BlogHeader = () => {
   return (
-    <div className="m-0">
-      <RyanLogo />
-    </div>
+    <Link href="/">
+      <a>
+        <RyanLogo />
+      </a>
+    </Link>
   );
 };
 export default BlogHeader;
