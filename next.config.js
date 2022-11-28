@@ -17,7 +17,7 @@ const nextConfig = (phase, { defaultConfig }) => {
       swcMinify: true,
 
       env: {
-        backendBaseUrl: "http://localhost:3002/api/v1",
+        backendBaseUrl: "http://localhost:8080/api/v1",
         appBaseUrl: "http://localhost:3000",
       },
     };
